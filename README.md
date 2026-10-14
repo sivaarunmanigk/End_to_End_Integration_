@@ -371,7 +371,6 @@ Electronics and Communication Engineering · Automotive Embedded Systems
 ### RAVEENDRANATH K L
 Electronics and Communication Engineering · Automotive Embedded Systems
 
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github)](https://github.com/sivaarunmanigk)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00C7B7?logo=vercel&logoColor=white)](https://sivaarunmani.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sivaarunmanigk/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github)](https://github.com/klraveendranath2007)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/k-l-raveendranath07/)
 
