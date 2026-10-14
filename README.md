@@ -40,6 +40,8 @@ Finally, the application must execute `NvM_EraseAll()` followed by `NvM_ReadAll(
 - LPUART driver for serial communication.
 - PuTTY or a similar serial terminal for monitoring and testing.
 
+> **Screenshot note:** Images in this README use repository-relative paths under `Screenshots/`. Upload the matching PNG files to that folder in GitHub so they are visible to everyone.
+
 ## 3. Pin Configuration
 
 The application uses I2C to communicate with the EEPROM and UART to interact with the user.
@@ -51,7 +53,7 @@ The application uses I2C to communicate with the EEPROM and UART to interact wit
 | PTC6 | LPUART1_RX | UART data reception |
 | PTC7 | LPUART1_TX | UART data transmission |
 
-<img width="1919" height="1139" alt="Screenshot 2026-10-14 141730" src="https://github.com/user-attachments/assets/f50b30a4-95c9-4736-a2a4-73c5f50d897c" />
+![S32K144 Pin Configuration](Screenshots/Pin_Configuration.png)
 
 
 ### I2C Configuration
@@ -64,14 +66,14 @@ The application uses I2C to communicate with the EEPROM and UART to interact wit
 
 The EEPROM uses I2C for reading and writing stored data. The driver selects the appropriate 256-byte section using the high address bit and uses the lower address byte to specify the location within that section.
 
-<img width="1919" height="1138" alt="Screenshot 2026-10-14 141844" src="https://github.com/user-attachments/assets/2cdbe3be-bb6e-4a7b-b4fb-3f9108921268" />
+![I2C Configuration](Screenshots/i2c_Configuration.png)
 
 
 ### UART Configuration
 
 LPUART1 provides the user interface through a serial terminal. It displays the NvM menu, accepts block selections and hexadecimal input, and prints the contents of each memory block.
 
-<img width="1918" height="1140" alt="Screenshot 2026-10-14 142011" src="https://github.com/user-attachments/assets/ef67bf0c-14e1-489a-bc99-53e348dc7e61" />
+![UART Configuration](Screenshots/Uart_Configuration.png)
 
 
 ## 4. Block Integration and Memory Allocation
@@ -89,7 +91,7 @@ Block A stores 4 bytes of application data and an additional CRC byte for integr
 
 Once Block A has been successfully written and its lock marker is stored, subsequent write attempts are rejected. CRC validation is performed when reading the data.
 
-<img width="2203" height="714" alt="image" src="https://github.com/user-attachments/assets/dc6dfd5e-c66b-450c-b977-9f8a8fa7b4c4" />
+![Block A Memory Configuration](Screenshots/Block_A_Memory.png)
 
 
 ### Block B – Redundant Storage and Flexible RAM
@@ -105,7 +107,7 @@ Block B stores 10 bytes of application data along with a CRC byte. Two copies ar
 
 When reading Block B, the manager first validates the primary copy. If the primary copy is invalid, the secondary copy is read and validated as a fallback.
 
-<img width="2172" height="724" alt="image" src="https://github.com/user-attachments/assets/0462e8e5-f218-4434-8d1a-ecae5a5b7c81" />
+![Block B Memory Configuration](Screenshots/Block_B_Memory.png)
 
 
 ### Block C – Multi-Page Storage Without Protection
@@ -120,7 +122,7 @@ Block C stores 20 bytes of application data and one CRC byte.
 
 Because the EEPROM page size is 8 bytes, a 21-byte write must be divided into multiple page-compatible operations. This prevents a write from crossing a page boundary in a single page-write transaction.
 
-<img width="2172" height="516" alt="Block C EEPROM Data Register Layout" src="https://github.com/user-attachments/assets/fe1189aa-57fc-4dc9-ac47-9de51bda57d5" />
+![Block C EEPROM Data Register Layout](Screenshots/Block_C_Memory.png)
 
 
 ### EEPROM Footprint Calculation
@@ -299,7 +301,7 @@ Build the project in S32 Design Studio and flash the generated program onto the 
 
 Open PuTTY or another serial terminal and configure it to match the LPUART1 settings used in the project. Reset the board and confirm that the NvM Manager menu appears.
 
-<img width="606" height="555" alt="image" src="https://github.com/user-attachments/assets/af514845-e639-42f3-a859-d6e938808c8d" />
+![PuTTY Configuration](Screenshots/Putty_configuration.png)
 
 
 ### Step 3 – Test Individual Blocks
@@ -344,11 +346,11 @@ The combined allocation requires only 49 occupied bytes, including CRC overhead 
 
 After a successful erase followed by `NvM_ReadAll()`, all three blocks should report their configured zero-filled fallback values. Successful completion of these tests demonstrates the integration of the three blocks and the basic erase-and-recovery workflow.
 
-<img width="829" height="527" alt="image" src="https://github.com/user-attachments/assets/597fbb14-6253-4ba0-9be5-856510e4cddb" />
+![PuTTY Test Output 1](Screenshots/Putty_output_1.png)
 
-<img width="774" height="731" alt="image" src="https://github.com/user-attachments/assets/5b420428-71ff-477e-a1dd-995a8662b6ac" />
+![PuTTY Test Output 2](Screenshots/Putty_output_2.png)
 
-<img width="830" height="525" alt="image" src="https://github.com/user-attachments/assets/1230ac12-2d21-4bfc-9e57-2e56d25fa3a5" />
+![PuTTY Test Output 3](Screenshots/Putty_output_3.png)
 
 
 ## 9. Conclusion
@@ -364,12 +366,12 @@ Electronics and Communication Engineering · Automotive Embedded Systems
 
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github)](https://github.com/sivaarunmanigk)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00C7B7?logo=vercel&logoColor=white)](https://sivaarunmani.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin&logoColor=white)](www.linkedin.com/in/sivaarunmanigk)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sivaarunmanigk/)
 
 ### RAVEENDRANATH K L
 Electronics and Communication Engineering · Automotive Embedded Systems
 
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github)](https://github.com/sivaarunmanigk)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00C7B7?logo=vercel&logoColor=white)](https://sivaarunmani.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin&logoColor=white)](www.linkedin.com/in/sivaarunmanigk)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sivaarunmanigk/)
 
