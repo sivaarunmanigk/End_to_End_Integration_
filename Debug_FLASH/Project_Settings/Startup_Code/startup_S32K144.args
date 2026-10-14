@@ -1,0 +1,15 @@
+-c
+-I../SDK/platform/pal/inc
+-I../SDK/platform/drivers/inc
+-I../SDK/rtos/osif
+-I../SDK/platform/drivers/src/lpuart
+-I"F:/ANCIT_Projects/End_to_End_Integration_Project/board"
+-x assembler-with-cpp
+-g3
+-mcpu=cortex-m4
+-mthumb
+-mfloat-abi=hard
+-mfpu=fpv4-sp-d16
+-specs=nano.specs
+-specs=nosys.specs
+--sysroot="F:/S32-1/S32DS/build_tools/gcc_b1620/gcc-6.3-arm32-eabi/arm-none-eabi/newlib"
