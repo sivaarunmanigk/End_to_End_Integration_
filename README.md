@@ -35,12 +35,9 @@ Finally, the application must execute `NvM_EraseAll()` followed by `NvM_ReadAll(
 ### Software
 
 - S32 Design Studio (S32DS).
-- S32 SDK RTM 4.0.1.
-- I2C Peripheral Abstraction Layer (PAL).
-- LPUART driver for serial communication.
 - PuTTY or a similar serial terminal for monitoring and testing.
 
-> **Screenshot note:** Images in this README use repository-relative paths under `Screenshots/`. Upload the matching PNG files to that folder in GitHub so they are visible to everyone.
+
 
 ## 3. Pin Configuration
 
