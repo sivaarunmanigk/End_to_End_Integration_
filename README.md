@@ -1,6 +1,6 @@
 # End to End Integration – EEPROM and NvM Manager
 
-[![YouTube](https://img.shields.io/badge/Watch_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/W1GX3eYCYYU)
+[![Output Video](https://img.shields.io/badge/▶-OUTPUT_VIDEO-FF0000?style=for-the-badge)](https://youtu.be/W1GX3eYCYYU)
 
 
 ## 1. Problem Analysis
