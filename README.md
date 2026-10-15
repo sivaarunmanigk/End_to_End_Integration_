@@ -28,8 +28,7 @@ Finally, the application must execute `NvM_EraseAll()` followed by `NvM_ReadAll(
 ### Hardware
 
 - NXP S32K144 microcontroller development board (EV2).
-- External 24C04 EEPROM with 512 bytes of storage.
-- I2C connections between the microcontroller and EEPROM.
+- Internal 24C04 EEPROM with 512 bytes of storage.
 - USB connection for programming and UART communication with a PC.
 
 ### Software
